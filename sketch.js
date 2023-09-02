@@ -62,11 +62,9 @@ function movimentaBolinha() {
 function verificaColisaoBorda() {
   if (xBolinha + raio > width || xBolinha - raio < 0) {
     velocidadeXBolinha *= -1;
-    raquetada.play();
   }
   if (yBolinha + raio > height || yBolinha - raio < 0) {
     velocidadeYBolinha *= -1;
-    raquetada.play();
   }
 }
 function mostraRaquete(x, y) {
@@ -111,16 +109,14 @@ function incluiPlacar() {
 function marcaPonto() {
   if (xBolinha > 590) {
     meusPontos += 1;
-    ponto.play();
   }
   if (xBolinha < 10) {
     pontosDoOponente += 1;
-    ponto.play();
   }
 }
 
 function bolinhaNãoFicaPresa() {
-  if (xVolinha - raio < 0) {
+  if (xBolinha - raio < 0) {
     xBolinha = 23;
   }
 }
